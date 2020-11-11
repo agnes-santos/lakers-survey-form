@@ -20,7 +20,7 @@ An LA Lakers survey form, a project from the [FreeCodeCamp Responsive Web Design
 - [x] 9: HTML5 validation error if numbers entered are outside the `min` `max` range
 - [x] 10: Name, email & number input fields corresponding labels with `id="name-label"`, `id="email-label"`, `id="number-label"`
 - [x] 11: Placeholder for name, email & number fields
-- [ ] 12: Drop-down field with `id="dropdown"` inside form element
+- [x] 12: Drop-down field with `id="dropdown"` inside form element
 - [ ] 13: Radio buttons grouped using `name` attribute
 - [ ] 14: Checkboxes each with a `value` attribute inside form element
 - [ ] 15: `textarea` at the end

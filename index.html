@@ -36,13 +36,15 @@
       }
       input,
       label,
+      select,
       button {
         display: block;
         margin: auto;
         border: 0;
         width: 430px;
       }
-      input {
+      input,
+      select {
         background: transparent;
         border-bottom: white 1px solid;
         margin: 10px auto 20px auto;
@@ -50,25 +52,34 @@
         color: white;
         font-size: 15px;
       }
-      input:focus {
+      input:focus,
+      select:focus {
         outline: 0;
         border-bottom: gold 1px solid;
       }
-      label,
-      input[value=""] + label {
+      label {
         -webkit-transform: translate3d(0, -45px, 0);
         transform: translate3d(0, -45px, 0);
         -webkit-transition: all 0.1s ease-out;
         transition: all 0.1s ease-out;
       }
-      input:focus + label {
+      input:focus + label,
+      select:focus + label {
         color: gold;
       }
       /* Label transition on focus or if input is filled*/
       input:not(:placeholder-shown) + label,
-      input:focus + label {
+      input:focus + label,
+      select:valid + label,
+      select:focus + label {
         -webkit-transform: translate3d(0, -75px, 0);
         transform: translate3d(0, -75px, 0);
+      }
+      select {
+        cursor: pointer;
+      }
+      select > * {
+        background: rgb(12, 12, 12);
       }
       /* Invalid only if input is filled */
       input:not(:placeholder-shown):invalid + label {
@@ -141,6 +152,17 @@
         />
         <label for="number" id="number-label">Age:</label>
 
+        <select id="dropdown" required>
+          <option disabled value="" selected></option>
+          <option value="Africa">Africa</option>
+          <option value="Antartica">Antartica</option>
+          <option value="Asia">Asia</option>
+          <option value="Australia">Australia</option>
+          <option value="Europe">Europe</option>
+          <option value="North America">North America</option>
+          <option value="South Africa">South Africa</option>
+        </select>
+        <label for="dropdown">Continent:</label>
         <button type="submit" id="submit">Submit</button>
       </form>
     </main>
