@@ -10,8 +10,9 @@ body {
   color: white;
 }
 main {
+  background: url("bg-alpha.png") repeat; /* IE Compatibility*/
   background: rgba(0, 0, 0, 0.85);
-  max-width: 800px;
+  max-width: 575px;
   margin: auto;
   padding: 20px;
   border-radius: 15px;
