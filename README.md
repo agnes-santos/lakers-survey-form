@@ -11,10 +11,10 @@ An LA Lakers survey form, a project from the [FreeCodeCamp Responsive Web Design
 - [x] 4: Field "name" required with `id="name"`
 - - [x] Inside the form element
 - - [x] HTML5 validation error if name not entered
-- [ ] 5: Field "email" required with `id="email"`
-- - [ ] Inside the form element
-- - [ ] HTML5 validation error if name not entered
-- [ ] 6: HTML5 validation error if email not formatted correctly
+- [x] 5: Field "email" required with `id="email"`
+- - [x] Inside the form element
+- - [x] HTML5 validation error if name not entered
+- [x] 6: HTML5 validation error if email not formatted correctly
 - [ ] 7: Field "number" inside the form with `id="number"`
 - [ ] 8: HTML5 validation error if non-numbers entered in the number field
 - [ ] 9: HTML5 validation error if numbers entered are outside the `min` `max` range
@@ -24,4 +24,4 @@ An LA Lakers survey form, a project from the [FreeCodeCamp Responsive Web Design
 - [ ] 13: Radio buttons grouped using `name` attribute
 - [ ] 14: Checkboxes each with a `value` attribute inside form element
 - [ ] 15: `textarea` at the end
-- [ ] 16: Button with `id="submit"` inside form element
+- [x] 16: Button with `id="submit"` inside form element
