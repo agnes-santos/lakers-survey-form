@@ -1,5 +1,9 @@
 # lakers-survey-form
 
+https://agnes-nuguid.github.io/lakers-survey-form/
+
+![image](https://user-images.githubusercontent.com/22828458/98815364-f70a3100-2461-11eb-993f-94b0801951eb.png)
+
 An LA Lakers survey form, a project from the [FreeCodeCamp Responsive Web Design Projects - Survey Form](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form)
 
 ## [User Stories](https://github.com/agnes-nuguid/lakers-survey-form/issues/1)
