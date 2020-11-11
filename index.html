@@ -40,6 +40,7 @@
       label,
       select,
       fieldset,
+      textarea,
       button {
         display: block;
         margin: auto;
@@ -49,7 +50,8 @@
       input[type="text"],
       input[type="email"],
       input[type="number"],
-      select {
+      select,
+      textarea {
         background: transparent;
         border-bottom: white 1px solid;
         margin: 10px auto 20px auto;
@@ -58,7 +60,8 @@
         font-size: 15px;
       }
       input:focus,
-      select:focus {
+      select:focus,
+      textarea:focus {
         outline: 0;
         border-bottom: gold 1px solid;
       }
@@ -69,7 +72,8 @@
         transition: all 0.1s ease-out;
       }
       input:focus + label,
-      select:focus + label {
+      select:focus + label,
+      textarea:focus + label {
         color: gold;
       }
       /* Label transition on focus or if input is filled*/
@@ -79,6 +83,12 @@
       select:focus + label {
         -webkit-transform: translate3d(0, -75px, 0);
         transform: translate3d(0, -75px, 0);
+      }
+      /* Label transition on focus or if input is filled*/
+      textarea:not(:placeholder-shown) + label,
+      textarea:focus + label {
+        -webkit-transform: translate3d(0, -145px, 0);
+        transform: translate3d(0, -145px, 0);
       }
       select {
         cursor: pointer;
@@ -119,7 +129,8 @@
         color: transparent;
       }
       /* Displays placeholders on focus */
-      input:focus::-webkit-input-placeholder {
+      input:focus::-webkit-input-placeholder,
+      textarea:focus::-webkit-input-placeholder {
         /* Edge */
         color: silver;
       }
@@ -263,6 +274,12 @@
             Waiters
           </label>
         </fieldset>
+        <textarea
+          id="message"
+          rows="5"
+          placeholder="Lakers for life!"
+        ></textarea>
+        <label for="message" id="number-label">Message:</label>
         <button type="submit" id="submit">Submit</button>
       </form>
     </main>
