@@ -17,7 +17,7 @@ An LA Lakers survey form, a project from the [FreeCodeCamp Responsive Web Design
 - [x] 6: HTML5 validation error if email not formatted correctly
 - [x] 7: Field "number" inside the form with `id="number"`
 - [x] 8: HTML5 validation error if non-numbers entered in the number field
-- [ ] 9: HTML5 validation error if numbers entered are outside the `min` `max` range
+- [x] 9: HTML5 validation error if numbers entered are outside the `min` `max` range
 - [ ] 10: Name, email & number input fields corresponding labels with `id="name-label"`, `id="email-label"`, `id="number-label"`
 - [ ] 11: Placeholder for name, email & number fields
 - [ ] 12: Drop-down field with `id="dropdown"` inside form element
