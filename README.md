@@ -8,9 +8,9 @@ An LA Lakers survey form, a project from the [FreeCodeCamp Responsive Web Design
 - [x] 1: Title with `id="title"` in H1 sized text
 - [x] 2: `<p>` with a short description with `id="description"`
 - [x] 3: `<form>` with `id="survey-form"`.
-- [ ] 4: Field "name" required with `id="name"`
-- - [ ] Inside the form element
-- - [ ] HTML5 validation error if name not entered
+- [x] 4: Field "name" required with `id="name"`
+- - [x] Inside the form element
+- - [x] HTML5 validation error if name not entered
 - [ ] 5: Field "email" required with `id="email"`
 - - [ ] Inside the form element
 - - [ ] HTML5 validation error if name not entered
