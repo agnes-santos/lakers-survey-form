@@ -5,7 +5,7 @@ An LA Lakers survey form, a project from the [FreeCodeCamp Responsive Web Design
 ## [User Stories](https://github.com/agnes-nuguid/lakers-survey-form/issues/1)
 
 - [x] 0: Setup Technology Stack
-- [ ] 1: Title with `id="title"` in H1 sized text
+- [x] 1: Title with `id="title"` in H1 sized text
 - [ ] 2: `<p>` with a short description with `id="description"`
 - [ ] 3: `<form>` with `id="survey-form"`.
 - [ ] 4: Field "name" required with `id="name"`
