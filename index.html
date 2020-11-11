@@ -24,7 +24,7 @@
         border-radius: 15px;
       }
       h1 {
-        font-family: Rokkit, serif;
+        font-family: Rokkitt, serif;
         font-weight: 600;
         color: gold;
         text-align: center;
@@ -32,7 +32,7 @@
       }
       #description {
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
       }
       input,
       label,
@@ -46,15 +46,61 @@
         background: transparent;
         border-bottom: white 1px solid;
         margin: 10px auto 20px auto;
-        padding: 5px 0px;
+        padding: 5px;
         color: white;
         font-size: 15px;
       }
-
       input:focus {
         outline: 0;
         border-bottom: gold 1px solid;
+      }
+      label,
+      input[value=""] + label {
+        -webkit-transform: translate3d(0, -45px, 0);
+        transform: translate3d(0, -45px, 0);
+        -webkit-transition: all 0.1s ease-out;
+        transition: all 0.1s ease-out;
+      }
+      input:focus + label {
         color: gold;
+      }
+      /* Label transition on focus or if input is filled*/
+      input:not(:placeholder-shown) + label,
+      input:focus + label {
+        -webkit-transform: translate3d(0, -75px, 0);
+        transform: translate3d(0, -75px, 0);
+      }
+      /* Invalid only if input is filled */
+      input:not(:placeholder-shown):invalid + label {
+        color: red;
+      }
+      input:not(:placeholder-shown):invalid {
+        border-bottom: red 1px solid;
+        color: red;
+      }
+      /* Hides placeholders by default */
+      ::-webkit-input-placeholder {
+        /* Edge */
+        color: transparent;
+      }
+      :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: transparent;
+      }
+      ::placeholder {
+        color: transparent;
+      }
+      /* Displays placeholders on focus */
+      input:focus::-webkit-input-placeholder {
+        /* Edge */
+        color: silver;
+      }
+      input:focus:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: silver;
+      }
+      input:focus::placeholder {
+        color: silver;
       }
       button {
         padding: 15px;
@@ -74,12 +120,27 @@
         A survey to gather various data on the LA Lakers Champions.
       </p>
       <form id="survey-form">
+        <input type="text" id="name" placeholder="Jeanie Buss" required />
         <label for="name" id="name-label">Name:</label>
-        <input type="text" id="name" required />
+
+        <input
+          type="email"
+          id="email"
+          placeholder="forlife@lakers.com"
+          required
+        />
         <label for="email" id="email-label">Email:</label>
-        <input type="email" id="email" required />
+
+        <input
+          type="number"
+          id="number"
+          min="18"
+          max="60"
+          placeholder="18"
+          required
+        />
         <label for="number" id="number-label">Age:</label>
-        <input type="number" id="number" min="18" max="60" />
+
         <button type="submit" id="submit">Submit</button>
       </form>
     </main>
