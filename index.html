@@ -34,16 +34,21 @@
         text-align: center;
         margin-bottom: 60px;
       }
-      input,
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
       label,
       select,
+      fieldset,
       button {
         display: block;
         margin: auto;
         border: 0;
         width: 430px;
       }
-      input,
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
       select {
         background: transparent;
         border-bottom: white 1px solid;
@@ -80,6 +85,15 @@
       }
       select > * {
         background: rgb(12, 12, 12);
+      }
+      /* Resets the fieldsets positioning */
+      fieldset label {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, -0, 0);
+      }
+      /* Hides default browser radio button */
+      input[type="radio"] {
+        margin: 10px;
       }
       /* Invalid only if input is filled */
       input:not(:placeholder-shown):invalid + label {
@@ -163,6 +177,18 @@
           <option value="South Africa">South Africa</option>
         </select>
         <label for="dropdown">Continent:</label>
+        <fieldset>
+          <legend>Gender:</legend>
+          <label for="male">
+            <input type="radio" name="gender" value="male" />Male
+          </label>
+          <label for="female">
+            <input type="radio" name="gender" value="female" />Female
+          </label>
+          <label for="non-binary">
+            <input type="radio" name="gender" value="non-binary" />Non Binary
+          </label>
+        </fieldset>
         <button type="submit" id="submit">Submit</button>
       </form>
     </main>
