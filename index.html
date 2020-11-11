@@ -4,153 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LA Lakers Champions Survey Form</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Rokkitt:wght@600&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Ubuntu");
-
-      body {
-        font-family: Ubuntu, sans-serif;
-        background: black
-          url("https://www.nba.com/lakers/sites/lakers/files/1920_lal_mktg_finals_final_wallpaper_jd.jpg")
-          no-repeat fixed center;
-        background-size: cover;
-        color: white;
-      }
-      main {
-        background: rgba(0, 0, 0, 0.85);
-        max-width: 800px;
-        margin: auto;
-        padding: 20px;
-        border-radius: 15px;
-      }
-      h1 {
-        font-family: Rokkitt, serif;
-        font-weight: 600;
-        color: gold;
-        text-align: center;
-        margin: 10px;
-      }
-      #description {
-        text-align: center;
-        margin-bottom: 60px;
-      }
-      input[type="text"],
-      input[type="email"],
-      input[type="number"],
-      label,
-      select,
-      fieldset,
-      textarea,
-      button {
-        display: block;
-        margin: auto;
-        border: 0;
-        width: 430px;
-      }
-      input[type="text"],
-      input[type="email"],
-      input[type="number"],
-      select,
-      textarea {
-        background: transparent;
-        border-bottom: white 1px solid;
-        margin: 10px auto 20px auto;
-        padding: 5px;
-        color: white;
-        font-size: 15px;
-      }
-      input:focus,
-      select:focus,
-      textarea:focus {
-        outline: 0;
-        border-bottom: gold 1px solid;
-      }
-      label {
-        -webkit-transform: translate3d(0, -45px, 0);
-        transform: translate3d(0, -45px, 0);
-        -webkit-transition: all 0.1s ease-out;
-        transition: all 0.1s ease-out;
-      }
-      input:focus + label,
-      select:focus + label,
-      textarea:focus + label {
-        color: gold;
-      }
-      /* Label transition on focus or if input is filled*/
-      input:not(:placeholder-shown) + label,
-      input:focus + label,
-      select:valid + label,
-      select:focus + label {
-        -webkit-transform: translate3d(0, -75px, 0);
-        transform: translate3d(0, -75px, 0);
-      }
-      /* Label transition on focus or if input is filled*/
-      textarea:not(:placeholder-shown) + label,
-      textarea:focus + label {
-        -webkit-transform: translate3d(0, -145px, 0);
-        transform: translate3d(0, -145px, 0);
-      }
-      select {
-        cursor: pointer;
-      }
-      select > * {
-        background: rgb(12, 12, 12);
-      }
-      fieldset {
-        margin-bottom: 30px;
-      }
-      /* Resets the fieldset labels positioning */
-      fieldset label {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, -0, 0);
-      }
-      input[type="radio"],
-      input[type="checkbox"] {
-        margin: 10px;
-      }
-      /* Invalid only if input is filled */
-      input:not(:placeholder-shown):invalid + label {
-        color: red;
-      }
-      input:not(:placeholder-shown):invalid {
-        border-bottom: red 1px solid;
-        color: red;
-      }
-      /* Hides placeholders by default */
-      ::-webkit-input-placeholder {
-        /* Edge */
-        color: transparent;
-      }
-      :-ms-input-placeholder {
-        /* Internet Explorer 10-11 */
-        color: transparent;
-      }
-      ::placeholder {
-        color: transparent;
-      }
-      /* Displays placeholders on focus */
-      input:focus::-webkit-input-placeholder,
-      textarea:focus::-webkit-input-placeholder {
-        /* Edge */
-        color: silver;
-      }
-      input:focus:-ms-input-placeholder {
-        /* Internet Explorer 10-11 */
-        color: silver;
-      }
-      input:focus::placeholder {
-        color: silver;
-      }
-      button {
-        padding: 15px;
-        background: rgb(65, 7, 173);
-        border-radius: 5px;
-        font-weight: bold;
-        color: gold;
-        margin-bottom: 20px;
-        cursor: pointer;
-      }
-    </style>
+    <link href="style.css" rel="stylesheet" />
   </head>
   <body>
     <main>
@@ -193,14 +47,38 @@
         <label for="dropdown">Continent:</label>
         <fieldset>
           <legend>Gender:</legend>
-          <label for="male">
-            <input type="radio" name="gender" value="male" />Male
+          <label class="radio" for="male">
+            <input
+              type="radio"
+              id="male"
+              name="gender"
+              value="male"
+              class="radio-input"
+            />
+            <div class="radio-radio"></div>
+            Male
           </label>
-          <label for="female">
-            <input type="radio" name="gender" value="female" />Female
+          <label class="radio" for="female">
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              class="radio-input"
+            />
+            <div class="radio-radio"></div>
+            Female
           </label>
-          <label for="non-binary">
-            <input type="radio" name="gender" value="non-binary" />Non Binary
+          <label class="radio" for="non-binary">
+            <input
+              type="radio"
+              id="non-binary"
+              name="gender"
+              value="non-binary"
+              class="radio-input"
+            />
+            <div class="radio-radio"></div>
+            Binary
           </label>
         </fieldset>
         <fieldset>
