@@ -86,13 +86,16 @@
       select > * {
         background: rgb(12, 12, 12);
       }
-      /* Resets the fieldsets positioning */
+      fieldset {
+        margin-bottom: 30px;
+      }
+      /* Resets the fieldset labels positioning */
       fieldset label {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, -0, 0);
       }
-      /* Hides default browser radio button */
-      input[type="radio"] {
+      input[type="radio"],
+      input[type="checkbox"] {
         margin: 10px;
       }
       /* Invalid only if input is filled */
@@ -187,6 +190,77 @@
           </label>
           <label for="non-binary">
             <input type="radio" name="gender" value="non-binary" />Non Binary
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Favorite Player:</legend>
+          <label for="37">
+            <input id="37" type="checkbox" name="player" value="37" /> Kostas
+            Antetokounpo
+          </label>
+          <label for="11">
+            <input id="11" type="checkbox" name="player" value="11" /> Avery
+            Bradley
+          </label>
+          <label for="12">
+            <input id="12" type="checkbox" name="player" value="12" /> Devontae
+            Cacok
+          </label>
+          <label for="1">
+            <input id="1" type="checkbox" name="player" value="1" /> Kentavious
+            Caldwell-Pope
+          </label>
+          <label for="4">
+            <input id="4" type="checkbox" name="player" value="4" /> Alex Caruso
+          </label>
+          <label for="28">
+            <input id="28" type="checkbox" name="player" value="28" /> Quinn
+            Cook
+          </label>
+          <label for="3">
+            <input id="3" type="checkbox" name="player" value="3" /> Anthony
+            Davis
+          </label>
+          <label for="10">
+            <input id="10" type="checkbox" name="player" value="10" /> Jared
+            Dudley
+          </label>
+          <label for="14">
+            <input id="14" type="checkbox" name="player" value="14" /> Danny
+            Green
+          </label>
+          <label for="5">
+            <input id="5" type="checkbox" name="player" value="5" /> Talen
+            Horton-Tucker
+          </label>
+
+          <label for="39">
+            <input id="39" type="checkbox" name="player" value="39" /> Dwight
+            Howard</label
+          ><label for="23">
+            <input id="23" type="checkbox" name="player" value="23" /> Lebron
+            James
+          </label>
+          <label for="0">
+            <input id="0" type="checkbox" name="player" value="0" /> Kyle Kuzma
+          </label>
+          <label for="7">
+            <input id="7" type="checkbox" name="player" value="7" /> Javale
+            McGee
+          </label>
+          <label for="88">
+            <input id="88" type="checkbox" name="player" value="88" /> Markieff
+            Morris
+          </label>
+          <label for="9">
+            <input id="9" type="checkbox" name="player" value="9" /> Rajon Rando
+          </label>
+          <label for="21">
+            <input id="21" type="checkbox" name="player" value="21" /> JR Smith
+          </label>
+          <label for="18">
+            <input id="18" type="checkbox" name="player" value="18" /> Dion
+            Waiters
           </label>
         </fieldset>
         <button type="submit" id="submit">Submit</button>

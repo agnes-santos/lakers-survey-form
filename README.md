@@ -22,6 +22,6 @@ An LA Lakers survey form, a project from the [FreeCodeCamp Responsive Web Design
 - [x] 11: Placeholder for name, email & number fields
 - [x] 12: Drop-down field with `id="dropdown"` inside form element
 - [x] 13: Radio buttons grouped using `name` attribute
-- [ ] 14: Checkboxes each with a `value` attribute inside form element
+- [x] 14: Checkboxes each with a `value` attribute inside form element
 - [ ] 15: `textarea` at the end
 - [x] 16: Button with `id="submit"` inside form element
