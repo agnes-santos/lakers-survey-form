@@ -132,40 +132,63 @@ input:focus::placeholder {
   color: silver;
 }
 /* From https://www.youtube.com/watch?v=5K7JefKDa4s */
-.radio {
+.radio,
+.checkbox {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
   margin: 5px;
 }
-.radio-input {
+.radio-input,
+.checkbox-input {
   display: none;
 }
-.radio-radio {
+.radio-radio,
+.checkbox-box {
   width: 1.25em;
   height: 1.25em;
   border: 1px solid white;
-  border-radius: 50%;
   margin-right: 10px;
+}
+.radio-radio {
+  border-radius: 50%;
   box-sizing: border-box;
   padding: 2px;
 }
+.checkbox-box {
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s, border-color 0.15s;
+}
 .radio-radio::after {
   content: "";
+  border-radius: 50%;
   width: 100%;
   height: 100%;
   display: block;
   background: gold;
-  border-radius: 50%;
   transform: scale(0);
   transition: transform 0.15s;
 }
-.radio-input:checked + .radio-radio::after {
+.checkbox-box::after {
+  content: "\2714";
+  color: rgb(65, 7, 173);
+  transform: scale(0);
+}
+
+.radio-input:checked + .radio-radio::after,
+.checkbox-input:checked + .checkbox-box::after {
   transform: scale(1);
 }
-input[type="checkbox"] {
-  margin: 10px;
+
+.checkbox-input:checked + .checkbox-box {
+  background: gold;
+  border-color: gold;
 }
+
 button {
   padding: 15px;
   background: rgb(65, 7, 173);
