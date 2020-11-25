@@ -10,6 +10,7 @@ body {
   color: white;
 }
 main {
+  display: block;
   background: url("bg-alpha.png") repeat; /* IE Compatibility*/
   background: rgba(0, 0, 0, 0.85);
   max-width: 575px;
@@ -60,9 +61,9 @@ textarea:focus {
   border-bottom: gold 1px solid;
 }
 label {
-  -webkit-transform: translate3d(0, -45px, 0);
-  transform: translate3d(0, -45px, 0);
-  -webkit-transition: all 0.1s ease-out;
+  -ms-transform: translate(0, -45px);
+  transform: translate(0, -45px);
+  -ms-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 input:focus + label,
@@ -75,14 +76,15 @@ input:not(:placeholder-shown) + label,
 input:focus + label,
 select:valid + label,
 select:focus + label {
-  -webkit-transform: translate3d(0, -75px, 0);
-  transform: translate3d(0, -75px, 0);
+  -ms-transform: translate(0, -75px);
+  transform: translate(0, -75px);
 }
+
 /* Label transition on focus or if input is filled*/
 textarea:not(:placeholder-shown) + label,
 textarea:focus + label {
-  -webkit-transform: translate3d(0, -145px, 0);
-  transform: translate3d(0, -145px, 0);
+  -ms-transform: translate(0, -145px);
+  transform: translate(0, -145px);
 }
 select {
   cursor: pointer;
@@ -95,8 +97,8 @@ fieldset {
 }
 /* Resets the fieldset labels positioning */
 fieldset label {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, -0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, -0);
 }
 
 /* Invalid only if input is filled */
@@ -108,7 +110,7 @@ input:not(:placeholder-shown):invalid {
   color: red;
 }
 /* Hides placeholders by default */
-::-webkit-input-placeholder {
+::-ms-input-placeholder {
   /* Edge */
   color: transparent;
 }
@@ -120,8 +122,8 @@ input:not(:placeholder-shown):invalid {
   color: transparent;
 }
 /* Displays placeholders on focus */
-input:focus::-webkit-input-placeholder,
-textarea:focus::-webkit-input-placeholder {
+input:focus::-ms-input-placeholder,
+textarea:focus::-ms-input-placeholder {
   /* Edge */
   color: silver;
 }
@@ -162,6 +164,7 @@ input:focus::placeholder {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  -ms-transition: background 0.15s, border-color 0.15s;
   transition: background 0.15s, border-color 0.15s;
 }
 .radio-radio::after {
@@ -177,11 +180,13 @@ input:focus::placeholder {
 .checkbox-box::after {
   content: "\2714";
   color: rgb(65, 7, 173);
+  -ms-transform: scale(0);
   transform: scale(0);
 }
 
 .radio-input:checked + .radio-radio::after,
 .checkbox-input:checked + .checkbox-box::after {
+  -ms-transform: scale(1);
   transform: scale(1);
 }
 
